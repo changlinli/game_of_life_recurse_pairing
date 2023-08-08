@@ -28,7 +28,7 @@ def get_alive_neighbor_count(gameboard: list[list[State]], x: int, y: int) -> in
                 continue
             # Need >= for maxs not just > because list indices are 0-indexed and the length
             # is therefore "too long" by one
-            if current_offset_x + x >= max_x or current_offset_y + y >= max_y or current_offset_x + x < min_x or current_offset_y < min_y:
+            if current_offset_x + x >= max_x or current_offset_y + y >= max_y or current_offset_x + x < min_x or current_offset_y + y < min_y:
                 continue
             cell_state = gameboard[x + current_offset_x][y + current_offset_y]
             match cell_state:
